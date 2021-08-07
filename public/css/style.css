@@ -1,266 +1,236 @@
-body 
-{
-	background-color: #333;
-	color: #DDD;
-	font-family: "Trebuchet MS", Arial, sans-serif;
+body {
+  background-color: #333;
+  color: #DDD;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-#content 
-{
-	width: 60%;
-	margin: auto;
+#content {
+  width: 60%;
+  margin: auto;
 }
 
-h1, h2, footer
-{
-	text-align: center;
+h1, h2, footer {
+  text-align: center;
 }
 
-nav ul
-{
-	margin: 0;
-	padding: 0;
+nav ul {
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li
-{
-	margin-left: 1%;
-	display: inline;
+nav ul li {
+  margin-left: 1%;
+  display: inline;
 }
 
-a, a:visited
-{
-	text-decoration: none;
-	color: #DDD;
+a, a:visited {
+  text-decoration: none;
+  color: #DDD;
 }
 
-a:hover
-{
-	text-decoration: underline;
-	color: #BBB;
+a:hover {
+  text-decoration: underline;
+  color: #BBB;
 }
 
-table
-{
-	margin: auto;
-	margin-bottom: 3%;
-	border-collapse: collapse;
-	border: 1px solid #DDD;
+table {
+  margin: auto;
+  margin-bottom: 3%;
+  border-collapse: collapse;
+  border: 1px solid #DDD;
 }
 
-th, td
-{
-	border: 1px solid #DDD;
-	padding: 0 10px;
+th, td {
+  border: 1px solid #DDD;
+  padding: 0 10px;
 }
 
-.form
-{
-	padding: 0 20%;
+.form {
+  padding: 0 20%;
 }
 
-@media all and (max-width: 480px) 
-{
-	body
-	{
-		margin: 0;
-	}
+@media all and (max-width: 480px) {
+  body {
+    margin: 0;
+  }
 
-    #content
-    {
-    	width: 100%;
-        margin: 0;
-    }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
 
-    h2
-    {
-    	margin: 2% 0;
-    }
+  h2 {
+    margin: 2% 0;
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  background-color: #666;
+  margin-top: 2%;
+  border-radius: 5%;
+  border: 2px solid #222;
 }
 
-section 
-{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 70%;
-	margin: auto;
-	background-color: #666;
-	margin-top: 2%;
-	border-radius: 5%;
-	border: 2px solid #222;
+.audioController {
+  width: 60%;
+  background-color: #DDD;
+  color: black;
+  border: 5px #CCC solid;
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  outline: none;
 }
 
-.audioController
-{
-	width: 60%;
-	background-color: #DDD;
-	color: black;
-	border: 5px #CCC solid;
-	border-radius: 50px;
-	padding: 5px;
-	display: flex;
-	justify-content: space-between;
-	outline: none;
+.audioDiv {
+  display: flex;
+  align-items: center;
 }
 
-.audioDiv
-{
-	display: flex;
-	align-items: center;
+.playPauseButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.playPauseButton
-{
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	-webkit-tap-highlight-color: transparent;
+@media all and (min-width: 480px) {
+  .playPauseButton:hover {
+    background-color: #BBB;
+  }
+}
+.timeDisplayer {
+  white-space: nowrap;
+  margin: 0 15px 0 5px;
 }
 
-@media all and (min-width: 480px)
-{
-	.playPauseButton:hover
-	{
-		background-color: #BBB;
-	}
-}
-
-.timeDisplayer
-{
-	white-space: nowrap;
-	margin: 0 15px 0 5px;
-}
-
-.progressBar
-{
-	animation-name: curtain_up-progressBar;
-	animation-duration: 0.4s;
-	width: 90px;
-	margin-right: 5px;
+.progressBar {
+  animation-name: curtain_up-progressBar;
+  animation-duration: 0.4s;
+  width: 90px;
+  margin-right: 5px;
 }
 
 @keyframes curtain_up-progressBar {
-	0% { width:50px; }
-	100% { width:90px; }
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 90px;
+  }
 }
-
-.progressBar2
-{
-	animation-name: curtain_up-progressBar2;
-	animation-duration: 0.4s;
-	width: 50px;
-	margin-right: 5px;
+.progressBar2 {
+  animation-name: curtain_up-progressBar2;
+  animation-duration: 0.4s;
+  width: 50px;
+  margin-right: 5px;
 }
 
 @keyframes curtain_up-progressBar2 {
-	0% { width:90px; }
-	100% { width:50px; }
+  0% {
+    width: 90px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+input[type=range] {
+  height: 5px;
 }
 
-input[type=range]
-{
-	height: 5px;
+.volumeDiv {
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.volumeDiv
-{
-	border-radius: 50px;
-	padding: 5px;
-	display: flex;
-	align-items: center;
+.volumeDiv:hover {
+  background-color: #BBB;
 }
 
-.volumeDiv:hover
-{
-	background-color: #BBB;
+.volumeBar {
+  animation-name: curtain_up-volumeBar;
+  animation-duration: 0.4s;
+  width: 60px;
+  margin-right: 10px;
 }
 
-.volumeBar
-{
-	animation-name: curtain_up-volumeBar;
-	animation-duration: 0.4s;
-	width: 60px;
-	margin-right: 10px;
+@keyframes curtain_up-volumeBar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+.volumeBar2 {
+  animation-name: curtain_up-volumeBar2;
+  animation-duration: 0.4s;
+  width: 0px;
+  margin-right: 10px;
 }
 
-@keyframes curtain_up-volumeBar 
-{
-	0% { width:0px; }
-	100% { width:60px; }
+@keyframes curtain_up-volumeBar2 {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+section img {
+  width: 90%;
+  border-radius: 20px;
+  margin: 20px 0;
 }
 
-.volumeBar2
-{
-	animation-name: curtain_up-volumeBar2;
-	animation-duration: 0.4s;
-	width: 0px;
-	margin-right: 10px;
-}
+@media all and (max-width: 480px) {
+  section {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+  }
 
-@keyframes curtain_up-volumeBar2 
-{
-	0% { width:60px; }
-	100% { width:0px; }
-}
+  section img {
+    width: 100%;
+    border-radius: 0;
+    margin: 2% 0;
+  }
 
-section img 
-{
-	width: 90%;
-	border-radius: 20px;
-	margin: 20px 0;
-}
+  .audioController {
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 
-@media all and (max-width: 480px) 
-{
-	section 
-	{
-		width: 100%;
-		border-radius: 0;
-		border: 0;
-	}
+  .audioDiv {
+    width: 100%;
+    padding: 0 2%;
+  }
 
-	section img 
-	{
-		width: 100%;
-		border-radius: 0;
-		margin: 2% 0;
-	}
+  .playPauseButton:active {
+    background-color: #BBB;
+  }
 
-	.audioController
-	{
-		width: 100%;
-		border-left: 0;
-		border-right: 0;
-		border-radius: 0;
-		padding-right: 0;
-		padding-left: 0;
-	}
+  .timeDisplayer {
+    margin: 0 10px;
+  }
 
-	.audioDiv
-	{
-		width: 100%;
-		padding: 0 2%;
-	}
+  .progressBar {
+    width: 100%;
+  }
 
-	.playPauseButton:active
-	{
-		background-color: #BBB;
-	}
-
-	.timeDisplayer
-	{
-		margin: 0 10px;
-	}
-
-	.progressBar
-	{
-		width: 100%;
-	}
-
-	.volumeDiv
-	{
-		display: none;
-	}
+  .volumeDiv {
+    display: none;
+  }
 }
