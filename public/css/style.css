@@ -15,7 +15,7 @@ input[type=range] {
 
 body {
   font-family: "Trebuchet MS", Arial, sans-serif;
-  color: #DDD;
+  color: #ddd;
 }
 
 .header {
@@ -85,9 +85,9 @@ body {
 }
 
 .audio-controller {
-  background-color: #DDD;
+  background-color: #ddd;
   color: black;
-  border: 0.25rem #CCC solid;
+  border: 0.25rem #ccc solid;
   border-radius: 33px;
   padding: 0.25rem;
   display: flex;
@@ -116,7 +116,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .btn-play-pause:hover {
-    background-color: #BBB;
+    background-color: #bbb;
   }
 }
 

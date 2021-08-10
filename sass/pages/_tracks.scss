@@ -15,7 +15,7 @@
 	flex-direction: column;
 	align-items: center;
 	width: 350px;
-	background-color: #666;
+	background-color: nth($palette, 2);
 	margin: .5rem;
 	border-radius: 1.25rem;
     padding: .5rem;
@@ -53,9 +53,9 @@
 
 .audio-controller
 {
-	background-color: #DDD;
+	background-color: #ddd;
 	color: black;
-	border: 0.25rem #CCC solid;
+	border: 0.25rem #ccc solid;
 	border-radius: 33px; //2rem
 	padding: 0.25rem;
 	display: flex;
@@ -83,7 +83,7 @@
 
     @include desktop-only {
         &:hover {
-            background-color: #BBB;
+            background-color: #bbb;
         }
     }
 }
