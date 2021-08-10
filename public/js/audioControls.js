@@ -11,9 +11,11 @@ class AudioController
 		this.volumeDiv = volumeDiv;
 		this.audio = audio;
 
-		this.playPauseButton.style.setProperty("height", "40px");
+		/*this.playPauseButton.style.setProperty("height", "40px");
 		this.playPauseButton.style.setProperty("width", this.playPauseButton.clientHeight + "px");
-		this.playPauseButton.style.setProperty("border-radius", this.playPauseButton.clientHeight / 2 + "px");
+		this.playPauseButton.style.setProperty("border-radius", this.playPauseButton.clientHeight / 2 + "px");*/
+		this.playPauseButton.style.setProperty("height", this.playPauseButton.clientWidth + "px");
+		this.playPauseButton.style.setProperty("border-radius", this.playPauseButton.clientWidth / 2 + "px");
 		this.canvas = this.playPauseButton.querySelector("canvas");
 		this.canvas.height = this.playPauseButton.clientHeight / 2;
 		this.canvas.width = this.canvas.height * 7 / 8;
@@ -131,16 +133,14 @@ class AudioController
 			this.unMute();
 	}
 
-	displayAudioVolume()
-	{
-		this.volumeBar.classList.replace("volumeBar2", "volumeBar");
-		this.progressBar.classList.replace("progressBar", "progressBar2");
+	displayAudioVolume() {
+		this.volumeBar.classList.toggle("volume-bar--displayed");
+		this.progressBar.classList.toggle("progress-bar--shortened");
 	}
 
-	hideAudioVolume()
-	{
-		this.volumeBar.classList.replace("volumeBar", "volumeBar2");
-		this.progressBar.classList.replace("progressBar2", "progressBar");
+	hideAudioVolume() {
+		this.volumeBar.classList.toggle("volume-bar--displayed");
+		this.progressBar.classList.toggle("progress-bar--shortened");
 	}
 }
 
@@ -177,20 +177,20 @@ function drawPause(canvas)
 	context.fill();
 }
 
-const sections = document.querySelectorAll('section');
+const tracks = document.querySelectorAll(".track");
 const audioControllers = [];
 
-for (let section of sections)
+for (let track of tracks)
 {
 	audioControllers.push(new AudioController(
-		section.querySelector(".playPauseButton"),
-		section.querySelector('.volumeButton'), 
-		section.querySelector('.muteButton'), 
-		section.querySelector('.timeDisplayer'),
-		section.querySelector('.progressBar'),
-		section.querySelector('.volumeBar2'),
-		section.querySelector('.volumeDiv'),
-		section.querySelector('audio')
+		track.querySelector(".btn-play-pause"),
+		track.querySelector('.volumeButton'), 
+		track.querySelector('.muteButton'), 
+		track.querySelector(".time-displayer"),
+		track.querySelector(".progress-bar"),
+		track.querySelector(".volume-bar"),
+		track.querySelector(".volume"),
+		track.querySelector("audio")
 	));
 }
 

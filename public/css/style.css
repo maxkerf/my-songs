@@ -1,210 +1,101 @@
-body {
-  background-color: #333;
-  color: #DDD;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-}
-
-#content {
-  width: 60%;
-  margin: auto;
-}
-
-h1, h2, footer {
-  text-align: center;
-}
-
-nav ul {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
-  margin-left: 1%;
-  display: inline;
+body {
+  background-color: #333;
 }
 
-a, a:visited {
-  text-decoration: none;
+input[type=range] {
+  height: 0.25rem;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
   color: #DDD;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #BBB;
+.header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #666;
 }
 
-table {
-  margin: auto;
-  margin-bottom: 3%;
-  border-collapse: collapse;
-  border: 1px solid #DDD;
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #222;
 }
 
-th, td {
-  border: 1px solid #DDD;
-  padding: 0 10px;
+.tracks-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
-
-.form {
-  padding: 0 20%;
-}
-
-@media all and (max-width: 480px) {
-  body {
-    margin: 0;
-  }
-
-  #content {
-    width: 100%;
-    margin: 0;
-  }
-
-  h2 {
-    margin: 2% 0;
+@media screen and (max-width: 480px) {
+  .tracks-grid {
+    padding: 1rem 0;
   }
 }
-section {
+
+.track {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
-  margin: auto;
+  width: 350px;
   background-color: #666;
-  margin-top: 2%;
-  border-radius: 5%;
-  border: 2px solid #222;
+  margin: 0.5rem;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 480px) {
+  .track {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+}
+.track__heading {
+  margin: 0.5rem;
+}
+.track__image {
+  margin: 0.5rem;
+}
+@media screen and (max-width: 480px) {
+  .track__image {
+    margin: 0.5rem 0;
+  }
+}
+.track__image img {
+  width: 100%;
+  border-radius: 1.25rem;
+  vertical-align: middle;
+}
+@media screen and (max-width: 480px) {
+  .track__image img {
+    border-radius: 0;
+  }
 }
 
-.audioController {
-  width: 60%;
+.audio-controller {
   background-color: #DDD;
   color: black;
-  border: 5px #CCC solid;
-  border-radius: 50px;
-  padding: 5px;
+  border: 0.25rem #CCC solid;
+  border-radius: 33px;
+  padding: 0.25rem;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   outline: none;
 }
-
-.audioDiv {
-  display: flex;
-  align-items: center;
-}
-
-.playPauseButton {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-tap-highlight-color: transparent;
-}
-
-@media all and (min-width: 480px) {
-  .playPauseButton:hover {
-    background-color: #BBB;
-  }
-}
-.timeDisplayer {
-  white-space: nowrap;
-  margin: 0 15px 0 5px;
-}
-
-.progressBar {
-  animation-name: curtain_up-progressBar;
-  animation-duration: 0.4s;
-  width: 90px;
-  margin-right: 5px;
-}
-
-@keyframes curtain_up-progressBar {
-  0% {
-    width: 50px;
-  }
-  100% {
-    width: 90px;
-  }
-}
-.progressBar2 {
-  animation-name: curtain_up-progressBar2;
-  animation-duration: 0.4s;
-  width: 50px;
-  margin-right: 5px;
-}
-
-@keyframes curtain_up-progressBar2 {
-  0% {
-    width: 90px;
-  }
-  100% {
-    width: 50px;
-  }
-}
-input[type=range] {
-  height: 5px;
-}
-
-.volumeDiv {
-  border-radius: 50px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.volumeDiv:hover {
-  background-color: #BBB;
-}
-
-.volumeBar {
-  animation-name: curtain_up-volumeBar;
-  animation-duration: 0.4s;
-  width: 60px;
-  margin-right: 10px;
-}
-
-@keyframes curtain_up-volumeBar {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 60px;
-  }
-}
-.volumeBar2 {
-  animation-name: curtain_up-volumeBar2;
-  animation-duration: 0.4s;
-  width: 0px;
-  margin-right: 10px;
-}
-
-@keyframes curtain_up-volumeBar2 {
-  0% {
-    width: 60px;
-  }
-  100% {
-    width: 0px;
-  }
-}
-section img {
-  width: 90%;
-  border-radius: 20px;
-  margin: 20px 0;
-}
-
-@media all and (max-width: 480px) {
-  section {
-    width: 100%;
-    border-radius: 0;
-    border: 0;
-  }
-
-  section img {
-    width: 100%;
-    border-radius: 0;
-    margin: 2% 0;
-  }
-
-  .audioController {
+@media screen and (max-width: 480px) {
+  .audio-controller {
     width: 100%;
     border-left: 0;
     border-right: 0;
@@ -212,25 +103,103 @@ section img {
     padding-right: 0;
     padding-left: 0;
   }
+}
 
-  .audioDiv {
-    width: 100%;
-    padding: 0 2%;
-  }
-
-  .playPauseButton:active {
+.btn-play-pause {
+  cursor: pointer;
+  width: 40px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 480px) {
+  .btn-play-pause:hover {
     background-color: #BBB;
   }
+}
 
-  .timeDisplayer {
+.time-displayer {
+  white-space: nowrap;
+  margin: 0 15px 0 5px;
+}
+@media screen and (max-width: 480px) {
+  .time-displayer {
     margin: 0 10px;
   }
+}
 
-  .progressBar {
+.progress-bar {
+  animation: curtain-up-progress-bar 0.4s;
+  width: 90px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 480px) {
+  .progress-bar {
     width: 100%;
   }
+}
+.progress-bar--shortened {
+  animation: curtain-up-progress-bar-reverse 0.4s;
+  width: 30px;
+}
 
-  .volumeDiv {
+@keyframes curtain-up-progress-bar {
+  from {
+    width: 30px;
+  }
+  to {
+    width: 90px;
+  }
+}
+@keyframes curtain-up-progress-bar-reverse {
+  from {
+    width: 90px;
+  }
+  to {
+    width: 30px;
+  }
+}
+.volume {
+  border-radius: 1.5rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+}
+@media screen and (max-width: 480px) {
+  .volume {
     display: none;
+  }
+}
+.volume:hover {
+  background-color: #bbb;
+}
+
+.volume-bar {
+  animation: curtain-up-volume-bar-reverse 0.4s;
+  width: 0px;
+  margin-right: 10px;
+}
+.volume-bar--displayed {
+  animation: curtain-up-volume-bar 0.4s;
+  width: 60px;
+}
+
+@keyframes curtain-up-volume-bar {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 60px;
+  }
+}
+@keyframes curtain-up-volume-bar-reverse {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 0px;
   }
 }

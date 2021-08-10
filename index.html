@@ -9,54 +9,122 @@
 		<script type="text/javascript" src="./public/js/audioControls.js" defer></script>
 	</head>
 	<body>
-		<div id="content">
-			<header>
-				<h1>My songs</h1>
-				<hr />
-			</header>
-			
-			<article>
-				<section>
-					<h2>Максу</h2>
-					<audio src="./public/audio/014.0.wav">Audio element not supported by your browser.</audio>
-					<div class="audioController">
-						<div class="audioDiv">
-							<div class="playPauseButton" title="Play"><canvas></canvas></div>
-							<div class="timeDisplayer"></div>
-							<input type="range" class="progressBar" value="0" min="0" max="" step="1" />
-						</div>
-						<div class="volumeDiv">
-							<input type="range" class="volumeBar2" value="1" min="0" max="1" step="0.01" />
-							<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
-							<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
-						</div>
+		<header class="header">
+			<h1 class="header__heading">My songs</h1>
+		</header>
+		
+		<div class="tracks-grid">
+			<section class="track">
+				<h2 class="track__heading">Максу</h2>
+				<audio src="./public/audio/014.0.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
 					</div>
+				</div>
+				<div class="track__image">
 					<img src="./public/img/other/itachi-0.png" alt="Your browser cannot displayed the image." />
-				</section>
-				
-				<section>
-					<h2>Let's go!</h2>
-					<audio src="./public/audio/006.0.wav">Audio element not supported by your browser.</audio>
-					<div class="audioController">
-						<div class="audioDiv">
-							<div class="playPauseButton" title="Play"><canvas></canvas></div>
-							<div class="timeDisplayer"></div>
-							<input type="range" class="progressBar" value="0" min="0" max="" step="1" />
-						</div>
-						<div class="volumeDiv">
-							<input type="range" class="volumeBar2" value="1" min="0" max="1" step="0.01" />
-							<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
-							<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
-						</div>
+				</div>
+			</section>
+			
+			<section class="track">
+				<h2 class="track__heading">Let's go!</h2>
+				<audio src="./public/audio/006.0.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
 					</div>
+				</div>
+				<div class="track__image">
 					<img src="./public/img/other/akatsuki-0.jpg" alt="Your browser cannot displayed the image." />
-				</section>
-			</article>
+				</div>
+			</section>
 
-			<footer>
-				<hr />
-				<p>2021 - Réalisé par Maxime Kerfourn</p>
-			</footer>
+			<section class="track">
+				<h2 class="track__heading">G@MING</h2>
+				<audio src="./public/audio/012.0.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
+					</div>
+				</div>
+				<div class="track__image">
+					<img src="./public/img/other/jotaro-0.jpg" alt="Your browser cannot displayed the image." />
+				</div>
+			</section>
+			
+			<section class="track">
+				<h2 class="track__heading">Ninjutsu</h2>
+				<audio src="./public/audio/009.2.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
+					</div>
+				</div>
+				<div class="track__image">
+					<img src="./public/img/other/kakashi-0.jpg" alt="Your browser cannot displayed the image." />
+				</div>
+			</section>
+
+			<section class="track">
+				<h2 class="track__heading">_tresed</h2>
+				<audio src="./public/audio/010.0.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
+					</div>
+				</div>
+				<div class="track__image">
+					<img src="./public/img/other/naruto-0.jpg" alt="Your browser cannot displayed the image." />
+				</div>
+			</section>
+			
+			<section class="track">
+				<h2 class="track__heading">~~~</h2>
+				<audio src="./public/audio/020.0.wav">Audio element not supported by your browser.</audio>
+				<div class="audio-controller">
+					<div class="btn-play-pause" title="Play"><canvas></canvas></div>
+					<div class="time-displayer"></div>
+					<input type="range" class="progress-bar" value="0" min="0" max="" step="1" />
+					<div class="volume">
+						<input type="range" class="volume-bar" value="1" min="0" max="1" step="0.01" />
+						<input type="image" class="volumeButton" src="./public/img/essential/mini_volumeButton.png" alt="Volume" title="Mute" />
+						<input type="image" class="muteButton" src="./public/img/essential/mini_muteButton.png" alt="Mute" title="Unmute" />
+					</div>
+				</div>
+				<div class="track__image">
+					<img src="./public/img/other/kaneki-0.png" alt="Your browser cannot displayed the image." />
+				</div>
+			</section>
 		</div>
+
+		<footer class="footer">
+			2021 - Réalisé par Maxime Kerfourn
+		</footer>
 	</body>
 </html>

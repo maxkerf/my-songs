@@ -4,7 +4,8 @@
   "description": "Hi there!\r Please, be sure to add the directories \"./public/audios\" and \"./public/img/other\".\r The app will thank you for this operation.\r Have a nice day, ciao!",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map",
+    "start": "start index.html"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,150 @@
+.tracks-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    @include mobile-only {
+        padding: 1rem 0;
+    }
+}
+
+.track {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 350px;
+	background-color: #666;
+	margin: .5rem;
+	border-radius: 1.25rem;
+    padding: .5rem;
+
+    @include mobile-only {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        margin: .5rem 0;
+    }
+
+    &__heading {
+        margin: .5rem;
+    }
+
+    &__image {
+        margin: .5rem;
+
+        @include mobile-only {
+            margin: .5rem 0;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 1.25rem;
+            vertical-align: middle;
+
+            @include mobile-only {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.audio-controller
+{
+	background-color: #DDD;
+	color: black;
+	border: 0.25rem #CCC solid;
+	border-radius: 33px; //2rem
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	outline: none;
+
+    @include mobile-only {
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.btn-play-pause {
+	cursor: pointer;
+    width: 40px;
+    min-width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-tap-highlight-color: transparent;
+
+    @include desktop-only {
+        &:hover {
+            background-color: #BBB;
+        }
+    }
+}
+
+.time-displayer
+{
+	white-space: nowrap;
+	margin: 0 15px 0 5px;
+
+    @include mobile-only {
+        margin: 0 10px;
+    }
+}
+
+.progress-bar
+{
+	animation: curtain-up-progress-bar 0.4s;
+	width: 90px;
+	margin-right: 5px;
+
+    @include mobile-only {
+        width: 100%;
+    }
+
+    &--shortened {
+        animation: curtain-up-progress-bar-reverse 0.4s;
+        width: 30px;
+    }
+}
+
+@include curtain-up("progress-bar", 30px, 90px);
+@include curtain-up("progress-bar-reverse", 90px, 30px);
+
+.volume
+{
+	border-radius: 1.5rem;
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	background-color: #ccc;
+
+    @include mobile-only {
+        display: none;
+    }
+
+    &:hover {
+        background-color: #bbb;
+    }
+}
+
+.volume-bar
+{
+	animation: curtain-up-volume-bar-reverse 0.4s;
+	width: 0px;
+	margin-right: 10px;
+
+    &--displayed {
+        animation: curtain-up-volume-bar 0.4s;
+        width: 60px;
+    }
+}
+
+@include curtain-up("volume-bar", 0px, 60px);
+@include curtain-up("volume-bar-reverse", 60px, 0px);
