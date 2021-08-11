@@ -1,7 +1,7 @@
 {
   "name": "my-songs",
   "version": "1.0.0",
-  "description": "Hi there!\r Please, be sure to add the directories \"./public/audios\" and \"./public/img/other\".\r The app will thank you for this operation.\r Have a nice day, ciao!",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map",
