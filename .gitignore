@@ -1,2 +1,3 @@
 public/audio/*
+!public/audio/.gitkeep
 public/img/other
